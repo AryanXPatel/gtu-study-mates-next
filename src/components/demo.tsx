@@ -1,9 +1,11 @@
 import { Hero2 } from "@/components/ui/hero-2-1";
 
-export default function Home() {
+const DemoOne = () => {
   return (
     <div>
       <Hero2 />
     </div>
   );
-}
+};
+
+export { DemoOne };
