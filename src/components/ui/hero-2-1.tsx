@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { GTULogo } from "@/components/ui/gtu-logo";
 
 const Hero2 = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,10 +37,13 @@ const Hero2 = () => {
         {/* Navigation */}
         <nav className="container mx-auto flex items-center justify-between px-4 py-4 mt-6">
           <div className="flex items-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-              <span className="font-bold">⚡</span>
-            </div>
-            <span className="ml-2 text-xl font-bold text-white">LeadGenie</span>
+            <GTULogo
+              size="md"
+              className="text-white [&_path]:!fill-white [&_svg]:text-white"
+            />
+            <span className="ml-2 text-xl font-bold text-white">
+              GTU Study Mates
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -83,11 +87,12 @@ const Hero2 = () => {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                    <span className="font-bold">⚡</span>
-                  </div>
+                  <GTULogo
+                    size="md"
+                    className="text-white [&_path]:!fill-white [&_svg]:text-white"
+                  />
                   <span className="ml-2 text-xl font-bold text-white">
-                    LeadGenie
+                    GTU Study Mates
                   </span>
                 </div>
                 <button onClick={() => setMobileMenuOpen(false)}>
