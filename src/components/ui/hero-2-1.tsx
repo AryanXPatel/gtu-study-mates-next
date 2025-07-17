@@ -20,16 +20,16 @@ const Hero2 = () => {
         <source src="/gtu-study-hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Video overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
-
-      {/* Gradient background with grain effect - layered on top of video */}
-      <div className="flex flex-col items-end absolute -right-60 -top-10 blur-xl z-1 ">
-        <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-purple-600 to-sky-600"></div>
-        <div className="h-[10rem] rounded-full w-[90rem] z-1 bg-gradient-to-b blur-[6rem] from-pink-900 to-yellow-400"></div>
-        <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-yellow-600 to-sky-500"></div>
+      {/* SVG structure maintained without colorful gradients */}
+      <div className="flex flex-col items-end absolute -right-60 -top-10 blur-xl z-2">
+        {/* Keeping SVG structure but removing colorful gradients */}
       </div>
-      <div className="absolute inset-0 z-1 bg-noise opacity-30"></div>
+
+      {/* Subtle grain texture overlay */}
+      <div className="absolute inset-0 z-3 bg-noise opacity-20"></div>
+
+      {/* Video overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20 z-4"></div>
 
       {/* Content container */}
       <div className="relative z-10">
@@ -123,30 +123,44 @@ const Hero2 = () => {
         {/* Hero section */}
         <div className="container mx-auto mt-12 px-4 text-center">
           <h1 className="mx-auto max-w-4xl text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
-            Unbeatable Pricing for Dynamic Email Tools
+            From Struggling to Topping - Your GTU Transformation
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
-            Delivering unmatched email campaigns every day at unbeatable rates.
-            Our tool redefines cost-effectiveness. Now!!!
+            Everything you need to excel in GTU - organized, updated, and always
+            accessible
           </p>
           <div className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <button className="h-12 rounded-full bg-white px-8 text-base font-medium text-black hover:bg-white/90">
-              Start Your 7 Day Free Trial
-            </button>
-            <button className="h-12 rounded-full glass-effect grain-overlay px-8 text-base font-medium text-white hover:bg-white/20">
-              Watch Demo
-            </button>
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search semester subjects..."
+                className="h-12 w-80 rounded-full glass-effect grain-overlay px-6 text-base text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/30 bg-transparent"
+              />
+              <svg
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </div>
           </div>
 
           <div className="relative mx-auto my-20 w-full max-w-6xl">
             <div className="absolute inset-0 rounded shadow-lg bg-white blur-[10rem] bg-grainy opacity-20" />
 
             {/* Hero Image */}
-            <img
-              src="https://kikxai.netlify.app/_next/image?url=%2Fassets%2Fhero-image.png&w=1920&q=75"
+            {/* <img
+              src="null"
               alt="Hero Image"
               className="relative w-full h-auto shadow-md grayscale-100 rounded"
-            />
+            /> */}
           </div>
         </div>
       </div>
