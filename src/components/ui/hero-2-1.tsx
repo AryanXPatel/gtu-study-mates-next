@@ -9,13 +9,27 @@ const Hero2 = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-black">
-      {/* Gradient background with grain effect */}
-      <div className="flex flex-col items-end absolute -right-60 -top-10 blur-xl z-0 ">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/gtu-study-hero.mp4" type="video/mp4" />
+      </video>
+
+      {/* Video overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+      {/* Gradient background with grain effect - layered on top of video */}
+      <div className="flex flex-col items-end absolute -right-60 -top-10 blur-xl z-1 ">
         <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-purple-600 to-sky-600"></div>
         <div className="h-[10rem] rounded-full w-[90rem] z-1 bg-gradient-to-b blur-[6rem] from-pink-900 to-yellow-400"></div>
         <div className="h-[10rem] rounded-full w-[60rem] z-1 bg-gradient-to-b blur-[6rem] from-yellow-600 to-sky-500"></div>
       </div>
-      <div className="absolute inset-0 z-0 bg-noise opacity-30"></div>
+      <div className="absolute inset-0 z-1 bg-noise opacity-30"></div>
 
       {/* Content container */}
       <div className="relative z-10">
