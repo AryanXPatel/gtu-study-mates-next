@@ -30,7 +30,7 @@ const Hero2 = () => {
       <div className="absolute inset-0 z-3 bg-noise opacity-20"></div>
 
       {/* Video overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20 z-4"></div>
+      <div className="absolute inset-0 bg-black/40 z-4"></div>
 
       {/* Content container */}
       <div className="relative z-10">
@@ -119,18 +119,18 @@ const Hero2 = () => {
 
         {/* Badge */}
         <div className="mx-auto mt-6 flex max-w-fit items-center justify-center space-x-2 rounded-full glass-effect grain-overlay px-4 py-2">
-          <span className="text-sm font-medium text-white">
+          <span className="text-sm font-medium text-white drop-shadow-lg">
             Join the revolution today!
           </span>
-          <ArrowRight className="h-4 w-4 text-white" />
+          <ArrowRight className="h-4 w-4 text-white drop-shadow-lg" />
         </div>
 
         {/* Hero section */}
         <div className="container mx-auto mt-12 px-4 text-center">
-          <h1 className="mx-auto max-w-4xl text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-4xl text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl drop-shadow-lg">
             From Struggling to Topping - Your GTU Transformation
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white drop-shadow-lg">
             Everything you need to excel in GTU - organized, updated, and always
             accessible
           </p>
